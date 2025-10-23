@@ -86,3 +86,10 @@ For initial testing and verification on a standard desktop machine, **do not run
 ```bash
 # Recommended for meaningful results on a single machine (~8-12 hours)
 java -cp ".;jgrapht-core-1.5.1.jar" ACBSDemo --agents 100-500 --full-evaluation
+This would reduce total time to 12-24 hours, but most 2000-agent instances will still timeout with 75%+ failure rates.
+```
+If you want to test on 2000 agents, with instances: 50
+This will take an approximate total time of 23 days, but most 2000-agent instances will still timeout with 75%+ failure rates.
+
+**Bottom line:** 
+To obtain results with 2000 agents likely required cluster computing, not a single machine. Expect 5-7 days for the full benchmark, with diminishing returns as most high-agent-count runs will fail.
