@@ -406,7 +406,7 @@ class ACBS {
             Position segmentStart = agent.start;
             int startTime = 0;
             
-            // Find the waypoint *before* the current effective goal.
+            // Find the waypoint before the current effective goal.
             for (int i = 0; i < waypoints.size() - 1; i++) {
                 if (waypoints.get(i+1).equals(currentEffectiveGoal)) {
                     segmentStart = waypoints.get(i);
@@ -519,7 +519,7 @@ class ACBS {
                 // The next move starts at global time T + 1 = N (currentPath.getLength()).
                 int actualStartTime = currentPath.getLength(); 
                 
-                // 2. Get the *next* effective goal
+                // 2. Get the next effective goal
                 // The current path has already reached the old effective goal (currentEffectiveGoal).
                 // We use a temporary minimal path (just the final position) to find the next target.
                 Path pathFromEnd = new Path(Collections.singletonList(currentPathEnd)); 
