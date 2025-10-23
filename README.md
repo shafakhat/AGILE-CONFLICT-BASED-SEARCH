@@ -42,8 +42,7 @@ Output Files:
 -------------
 • results.csv - Raw experimental data
 • summary.txt - Performance summary with success rates and runtimes
-
---------------------------- 
+ 
 Computational requirements:
 ---------------------------
 Time Estimation for 2000 Agents
