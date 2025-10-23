@@ -1,6 +1,6 @@
 # AGILE-CONFLICT-BASED-SEARCH
 ## This repository contains the complete simulation code, benchmarks, and configuration files for the paper: "ACBS: A Bounded-Suboptimal Multi-Agent Path Finding Solver for Search-Based Problems."
-==============================================================
+
 ACBS Simulation using full Moving AI Lab benchmark Integration
 ==============================================================
 Implementation Source code includes
@@ -15,7 +15,7 @@ Implementation Source code includes
 8. Full experimental evaluation framework
 9. Summary report generation
 10. Demo with small example
------------
+
 How to Run:
 -----------
 Compile (ensure JGraphT is in classpath)
@@ -30,14 +30,14 @@ java -cp “.;jgrapht-core-1.5.1.jar” ACBSDemo --full-evaluation
 Custom agent range
 java -cp “.;jgrapht-core-1.5.1.jar” ACBSDemo --agents 100-500 --full-evaluation
 
--------------
+
 Requirements:
 -------------
 • JGraphT library (download from Maven Central)
 • Map files (download from https://movingai.com/benchmarks/mapf/)
 • Place maps in maps/ directory
 
--------------
+
 Output Files:
 -------------
 • results.csv - Raw experimental data
@@ -62,7 +62,7 @@ Total instances = 3 maps × 11 agent counts × 50 instances × 4 algorithms
 If all complete in ~1 second (very optimistic):
 	Total time = 6,600 seconds ≈ 1.8 hours
 
--------------------
+
 Realistic Scenario:
 -------------------
 The code will likely never complete for 2000 agents because:
@@ -71,7 +71,7 @@ The code will likely never complete for 2000 agents because:
 3. EECBS might reach 1500-1700 agents before consistent timeouts
 4. ACBS (claimed 5x speedup) probably reach 1900-2000 agents
 
--------------------------
+
 Actual timeline estimate:
 --------------------------------------------------------------------
 Agent Range	Avg Time/Instance		Total Time for Range
@@ -84,14 +84,14 @@ Agent Range	Avg Time/Instance		Total Time for Range
 		Total: 5-7 days of continuous computation
 --------------------------------------------------------------------
 
-----------------
+
 Critical Issues:
 ----------------
 1. Memory exhaustion - 2000 agents will consume gigabytes of RAM for constraint trees
 2. Most runs will timeout - You'll get more "TIMEOUT" results than actual solutions
 3. The paper's claims are questionable - Without the actual optimized implementation, you won't see 5x speedup
 
--------------------------
+
 Practical Recommendation:
 -------------------------
 Don't run the full benchmark. Instead: Test with reduced configuration
@@ -103,7 +103,7 @@ This gives you:
 • Meaningful data: You'll actually get solutions, not timeouts
 
 If you want to test on 2000 agents, reduce instances: 5 instances instead of 50
-INSTANCES_PER_CONFIG = 5;  // in code
+INSTANCES_PER_CONFIG = 50;  // in code
 
 This would reduce total time to 12-24 hours, but most 2000-agent instances will still timeout with 75%+ failure rates.
 
