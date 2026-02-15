@@ -36,24 +36,24 @@ This project is implemented in Java and requires the JGraphT library for graph o
 
 1.  **Compile:** Ensure `jgrapht-core-1.5.1.jar` is in your classpath.
     ```bash
-    javac -cp jgrapht-core-1.5.1.jar ACBSDemo.java
+    javac -cp jgrapht-core-1.5.1.jar ACBSMain.java
     ```
 
 2.  **Quick Demo (Small Example):**
     ```bash
-    java -cp ".;jgrapht-core-1.5.1.jar" ACBSDemo
+    java -cp ".;jgrapht-core-1.5.1.jar" ACBSMain
     ```
 
 3.  **Full Evaluation (Recommended Practical Run):**
     Runs a reduced set of agents (e.g., 100-500) to obtain meaningful, non-timeout results quickly.
     ```bash
-    java -cp ".;jgrapht-core-1.5.1.jar" ACBSDemo --full-evaluation
+    java -cp ".;jgrapht-core-1.5.1.jar" ACBSMain --full-evaluation
     ```
 
 4.  **Custom Agent Range:**
     Specify the exact range of agents for the full evaluation.
     ```bash
-    java -cp ".;jgrapht-core-1.5.1.jar" ACBSDemo --agents 100-500 --full-evaluation
+    java -cp ".;jgrapht-core-1.5.1.jar" ACBSMain --agents 100-500 --full-evaluation
     ```
 
 ---
